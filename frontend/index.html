@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Trendora</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ENjdO4Dr2bkBIFxQpeoA6DQD1KQ9Q8cbh6wr6j2k5A1l8bzt+M1F9Q6U8CB3F4pJ" crossorigin="anonymous">
+  </head>
+  <body class="bg-light">
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+    <script>
+      // Mobile navbar toggle
+      document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('click', function(e) {
+          const toggle = document.getElementById('navbarToggle');
+          const collapse = document.getElementById('navbarCollapse');
+          
+          if (toggle && collapse) {
+            if (toggle.contains(e.target)) {
+              e.stopPropagation();
+              collapse.classList.toggle('active');
+            } else if (!collapse.contains(e.target)) {
+              collapse.classList.remove('active');
+            }
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

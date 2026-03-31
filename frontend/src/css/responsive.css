@@ -1,0 +1,79 @@
+/* ========================================
+   Trendora - Responsive Layout Styles
+   Light Gradient Theme
+   ======================================== */
+
+/* Responsive Container */
+.responsive-container {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+@media (max-width: 1200px) {
+  .responsive-container {
+    max-width: 960px;
+  }
+}
+
+@media (max-width: 992px) {
+  .responsive-container {
+    max-width: 720px;
+  }
+}
+
+@media (max-width: 768px) {
+  .responsive-container {
+    max-width: 540px;
+    padding: 0 1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .responsive-container {
+    padding: 0 0.75rem;
+  }
+}
+
+/* Responsive Utilities */
+.hide-mobile {
+  display: block;
+}
+
+.show-mobile {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .hide-mobile {
+    display: none !important;
+  }
+
+  .show-mobile {
+    display: block;
+  }
+}
+
+@media (max-width: 576px) {
+  .main-content {
+    padding: 1rem;
+  }
+}
+
+/* Text Responsive */
+.text-responsive-sm {
+  font-size: clamp(0.875rem, 2vw, 1rem);
+}
+
+.text-responsive-md {
+  font-size: clamp(1rem, 2.5vw, 1.25rem);
+}
+
+.text-responsive-lg {
+  font-size: clamp(1.25rem, 3vw, 1.75rem);
+}
+
+.text-responsive-xl {
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
+}
