@@ -1,8 +1,7 @@
 const express = require('express');
 const router = express.Router();
-const tweetController = require('../controllers/tweetController');
-const authMiddleware = require('../middleware/authMiddleware');
-const upload = require('../middleware/upload');
+const { tweetController } = require('../controllers');
+const { authMiddleware, upload } = require('../middleware');
 
 router.get('/', authMiddleware, tweetController.getAllTweets);
 router.post('/', authMiddleware, upload.single('image'), tweetController.createTweet);

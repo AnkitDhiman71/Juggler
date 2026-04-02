@@ -3,11 +3,8 @@ const cors = require('cors')
 const session = require('express-session')
 const path = require('path')
 const app = express()
-const userRoutes = require('./routes/userRoutes')
-const tweetRoutes = require('./routes/tweetRoutes')
-
-const protectedRoutes = require('./routes/protectedRoutes')
-const errorMiddleware = require('./middleware/errorMiddleware')
+const routes = require('./routes')
+const { errorMiddleware } = require('./middleware')
 
 
 app.use(cors({
@@ -26,18 +23,16 @@ app.use(session({
   secret: process.env.SESSION_SECRET || 'juggler_secret',
   resave: false,
   saveUninitialized: false,
-  cookie: { 
-    maxAge: 1000 * 60 * 60, 
+  cookie: {
+    maxAge: 1000 * 60 * 60,
     sameSite: 'lax',
     secure: false, // Set to true in production with HTTPS
     httpOnly: true
   },
 }))
 
-
-app.use('/auth', userRoutes)
-app.use('/tweets', tweetRoutes)
-app.use('/protected', protectedRoutes)
+// Use centralized routes
+app.use('/api', routes)
 
 // Debug route to check session
 app.get('/debug/session', (req, res) => {
