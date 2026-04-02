@@ -23,7 +23,7 @@ app.use(express.json())
 app.use('/uploads', express.static(path.join(__dirname, 'uploads')))
 
 app.use(session({
-  secret: process.env.SESSION_SECRET || 'trendora_secret',
+  secret: process.env.SESSION_SECRET || 'juggler_secret',
   resave: false,
   saveUninitialized: false,
   cookie: { 
@@ -49,7 +49,7 @@ app.get('/debug/session', (req, res) => {
   });
 });
 
-app.get('/', (req, res) => res.send('Trendora API is running!'))
+app.get('/', (req, res) => res.send('Juggler API is running!'))
 
 app.use(errorMiddleware)
 

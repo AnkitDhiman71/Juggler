@@ -10,7 +10,7 @@ export default function AdminNavbar({ onLogout }) {
       <div className="navbar-responsive">
         <a href="/admin" className="navbar-brand">
           <i className="bi bi-shield-lock navbar-logo"></i>
-          <span>Trendora Admin</span>
+          <span>Juggler Admin</span>
         </a>
         
         <button className="navbar-toggle" onClick={() => setMenuOpen(!menuOpen)}>

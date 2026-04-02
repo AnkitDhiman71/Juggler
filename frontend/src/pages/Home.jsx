@@ -3,14 +3,14 @@ import { Link } from 'react-router-dom';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 
 export default function Home() {
-  const token = localStorage.getItem('trendoraToken');
+  const token = localStorage.getItem('jugglerToken');
 
   return (
     <div className="home-container animate__animated animate__fadeIn">
       <div className="home-card animate__animated animate__fadeInUp">
         <h1 className="home-title">
           <i className="bi bi-fire home-icon"></i>
-          Welcome to Trendora
+          Welcome to Juggler
         </h1>
         <p className="home-subtitle animate__animated animate__fadeIn">A simple social tweet board with authentication</p>
 

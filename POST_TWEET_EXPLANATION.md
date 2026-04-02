@@ -1,4 +1,4 @@
-# Trendora - Post Tweet Feature Complete Explanation
+# Juggler - Post Tweet Feature Complete Explanation
 
 This document explains the complete flow of posting a tweet with image upload, from frontend to backend.
 
@@ -258,7 +258,7 @@ app.use('/uploads', express.static(path.join(__dirname, 'uploads')))
 ## File Structure
 
 ```
-Trendora/
+Juggler/
 ├── backend/
 │   ├── uploads/              # Uploaded images stored here
 │   │   ├── 1774885613453img.jpg
@@ -539,7 +539,7 @@ fetch(url, {
 ```javascript
 {
   "_id": "65f8a2b1c4d5e6f7g8h9i0j1",
-  "content": "Hello from Trendora! #firstTweet",
+  "content": "Hello from Juggler! #firstTweet",
   "author": "65f8a1a2b3c4d5e6f7g8h9i0",
   "image": "/uploads/1774885613453photo.jpg",
   "likes": [],
@@ -582,4 +582,4 @@ fetch(url, {
 
 ---
 
-*Generated for Trendora - March 2026*
+*Generated for Juggler - March 2026*

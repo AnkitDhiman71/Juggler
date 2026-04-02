@@ -1,6 +1,6 @@
-# Trendora Backend Controllers - Complete Explanation
+# Juggler Backend Controllers - Complete Explanation
 
-This document provides a detailed line-by-line explanation of all controllers in the Trendora backend.
+This document provides a detailed line-by-line explanation of all controllers in the Juggler backend.
 
 ---
 
@@ -399,4 +399,4 @@ exports.me = (req, res) => {
 
 ---
 
-*Generated for Trendora Backend - March 2026*
+*Generated for Juggler Backend - March 2026*

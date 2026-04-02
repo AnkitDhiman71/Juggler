@@ -35,7 +35,7 @@ export default function Signup({ onSignup }) {
           <i className="bi bi-person-plus signup-icon"></i>
           Signup
         </h2>
-        <p className="signup-subtitle animate__animated animate__fadeIn">Create your Trendora account</p>
+        <p className="signup-subtitle animate__animated animate__fadeIn">Create your Juggler account</p>
 
         <form onSubmit={submit} className="signup-form animate__animated animate__fadeInUp">
           <div className="form-group animate__animated animate__fadeInLeft">

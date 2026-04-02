@@ -35,7 +35,7 @@ export default function Login({ onLogin }) {
           <i className="bi bi-box-arrow-in-right login-icon"></i>
           Login
         </h2>
-        <p className="login-subtitle animate__animated animate__fadeIn">Sign in to continue to Trendora</p>
+        <p className="login-subtitle animate__animated animate__fadeIn">Sign in to continue to Juggler</p>
 
         <form onSubmit={submit} className="login-form animate__animated animate__fadeInUp">
           <div className="form-group animate__animated animate__fadeInLeft">

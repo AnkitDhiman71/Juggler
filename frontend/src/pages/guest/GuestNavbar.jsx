@@ -11,7 +11,7 @@ export default function GuestNavbar({ onLogout }) {
       <div className="navbar-responsive">
         <a href="/guest" className="navbar-brand">
           <i className="bi bi-fire navbar-logo"></i>
-          <span>Trendora</span>
+          <span>Juggler</span>
         </a>
 
         <button className="navbar-toggle" onClick={() => setMenuOpen(!menuOpen)}>

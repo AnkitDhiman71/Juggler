@@ -54,7 +54,7 @@ export default function GuestDashboard() {
             <div className="section-content">
               <div className="explore-grid">
                 <div className="explore-item animate__animated animate__fadeInLeft" style={{ animationDelay: '0.1s' }}>
-                  <i className="bi bi-hash"></i> Trendora - 1.2K tweets
+                  <i className="bi bi-hash"></i> Juggler - 1.2K tweets
                 </div>
                 <div className="explore-item animate__animated animate__fadeInLeft" style={{ animationDelay: '0.2s' }}>
                   <i className="bi bi-hash"></i> HelloWorld - 856 tweets
