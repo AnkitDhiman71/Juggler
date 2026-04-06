@@ -1,4 +1,4 @@
-const BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000';
+const BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000/api';
 
 const getHeaders = () => ({
   'Content-Type': 'application/json',
@@ -20,6 +20,26 @@ const handleResponse = async (resp) => {
 
 export const register = async (payload) => {
   const resp = await fetch(`${BASE_URL}/auth/register`, {
+    method: 'POST',
+    headers: getHeaders(),
+    body: JSON.stringify(payload),
+    credentials: 'include',
+  });
+  return handleResponse(resp);
+};
+
+export const verifyOTP = async (payload) => {
+  const resp = await fetch(`${BASE_URL}/auth/verify-otp`, {
+    method: 'POST',
+    headers: getHeaders(),
+    body: JSON.stringify(payload),
+    credentials: 'include',
+  });
+  return handleResponse(resp);
+};
+
+export const resendOTP = async (payload) => {
+  const resp = await fetch(`${BASE_URL}/auth/resend-otp`, {
     method: 'POST',
     headers: getHeaders(),
     body: JSON.stringify(payload),
@@ -67,7 +87,7 @@ export const fetchTweets = async () => {
 
 export const createTweet = async (payload, options = {}) => {
   const isFormData = payload instanceof FormData;
-  
+
   const resp = await fetch(`${BASE_URL}/tweets`, {
     method: 'POST',
     headers: isFormData ? {} : getHeaders(),

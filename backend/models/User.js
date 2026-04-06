@@ -24,6 +24,8 @@ const userSchema = new mongoose.Schema(
     displayName: String,
     bio: String,
     profilePicture: String,
+    otp: String,
+    otpExpires: Date,
   },
   { timestamps: true }
 )

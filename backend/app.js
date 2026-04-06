@@ -16,7 +16,6 @@ app.use(cors({
 
 app.use(express.json())
 
-// Serve uploaded images
 app.use('/uploads', express.static(path.join(__dirname, 'uploads')))
 
 app.use(session({
@@ -26,15 +25,13 @@ app.use(session({
   cookie: {
     maxAge: 1000 * 60 * 60,
     sameSite: 'lax',
-    secure: false, // Set to true in production with HTTPS
+    secure: false, 
     httpOnly: true
   },
 }))
 
-// Use centralized routes
 app.use('/api', routes)
 
-// Debug route to check session
 app.get('/debug/session', (req, res) => {
   res.json({ 
     hasSession: !!req.session, 
